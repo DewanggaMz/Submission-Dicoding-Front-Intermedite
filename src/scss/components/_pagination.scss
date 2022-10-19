@@ -1,0 +1,44 @@
+.pagination{
+  width: 100%;
+  // height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul{
+    display: flex;
+    background: rgb(9, 47, 97);
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 5px;
+    li{
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      justify-content: center;
+      transition: .3s;
+      cursor: pointer;
+      margin: 0 3px;
+    }
+    li.dots{
+      cursor: default;
+    }
+    li.page{
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    li.nav{
+      padding: 0 20px;
+    }
+    li.prev{
+      border-radius: 20px 5px 5px 20px;
+    }
+    li.next{
+      border-radius: 5px 20px 20px 5px ;
+    }
+    li.nav:hover, .active, li.page:hover{
+      background: rgba(30, 219, 219, 0.856);
+    }
+  }
+}

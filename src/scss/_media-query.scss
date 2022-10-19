@@ -1,0 +1,59 @@
+@media (max-width: 300px) {
+  grid-movie{
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2), 1fr)) !important;
+  }
+}
+@media (min-width: 570px) {
+  header{
+    height: 7vh;
+  }
+  grid-movie{
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 6), 1fr)) !important;
+  }
+}
+
+
+@media (min-width: 950px) {
+  header{
+    height: 10vh;
+    max-height: 10vh;
+    .destop .menu{
+      display: flex;
+    }
+    .icon-menu{
+      display: none;
+    }
+    .container-menu-mobile{
+      display: none !important;
+    }
+  }
+  .container-swiper-hero{
+    display: none !important;
+  }
+
+  main{
+    .list-movies .heading{
+      padding: 15px 3%;
+    }
+    .kategori{
+      width: 15% !important;
+    }
+  }
+  
+  grid-movie{
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 9), 1fr)) !important;
+  }
+
+  info-detail{
+    flex-direction: row;
+    .poster{
+      flex: 1 1 50%;
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 0 10px;
+    }
+    .informasi{
+      flex: 1 1 50%;
+    }
+  }
+}

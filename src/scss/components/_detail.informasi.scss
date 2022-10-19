@@ -1,0 +1,124 @@
+@use '../resource';
+
+info-detail{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: resource.$bg-transparant;
+  backdrop-filter: blur(10px);
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: .3s;
+  .poster{
+    width: 100%;
+    flex: 1 1 35%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .informasi{
+    flex: 1 1 65%;
+    width: 100%;
+    padding: 10px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .heading {
+    border-bottom: 1px solid resource.$line-border;
+    padding: 10px 0;
+    h3{
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+  .detail-info{
+    width: 100%;
+    margin: 15px 0 0;
+    border-collapse: collapse;
+    tr{
+      height: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    th,td{
+      padding: 0 10px;
+    }
+    th{
+      text-align: left;
+      font-weight: 500;
+    }
+    td{
+      text-align: right;
+    }
+    tr:nth-child(even){
+      background: resource.$bg-transparant-2;
+    }
+    .language{
+      text-transform: uppercase;
+    }
+  }
+  .genre{
+    width: 100%;
+    background: resource.$bg-transparant-2;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    .heading-genre{
+      border-bottom: 1px solid resource.$line-border;
+    }
+    .content-genre, .heading-genre{
+      width: 100%;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content-genre{
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  .description{
+    padding: 0 10px;
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  .icon-close{
+    height: 40px;
+    width: 40px;
+    background: resource.$white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+    svg{
+      height: 18px;
+      width: 18px;
+    }
+  }
+  .icon-close:hover svg{
+    transform: scale(1.1);
+  }
+}

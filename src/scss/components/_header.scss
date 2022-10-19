@@ -1,0 +1,66 @@
+@use '../resource';
+
+header{
+  height: 9vh;
+  width: 100%;
+  background: resource.$header-bg;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid resource.$line-border-2;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  .destop{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    .menu{
+      align-items: center;
+      gap: 25px;
+      display: none;
+    }
+    a{
+      font-size: 0.8rem;
+      transition: .3s;
+    }
+    
+    li:hover a{
+      // font-size: 0.86rem;
+      transform: scale(1.1);
+    }
+  }
+
+  .left,.right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a{
+      color: resource.$white-1;
+      font-weight: 500;
+    }
+  }
+  .logo svg{
+    height: 35px;
+    width: 117px;
+  }
+
+  .icon{
+    height: 23px;
+    width: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+    svg{
+      height: inherit;
+      width: inherit;
+    }
+  }
+  .icon:hover{
+    transform: scale(1.1);
+  }
+}

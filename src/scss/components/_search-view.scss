@@ -1,0 +1,49 @@
+@use '../resource';
+
+search-view{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: resource.$primary-bg;
+  z-index: 10;
+  transition: .3s;
+  .header-search{
+    background: resource.$search-bg;
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 0 10px 0 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    .search{
+      height: 100%;
+      width: 100%;
+      color: resource.$white-1;
+      font-size: 1rem;
+      font-weight: 400;
+      background: transparent;
+    }
+    .icon-back{
+      cursor: pointer;
+      transition: .3s;
+      display: flex;
+      align-items: center;
+    }
+    .icon-back:hover svg{
+      transform: scale(1.1);
+    }
+  }
+
+  grid-movie{
+    max-height: calc(100% - 50px);
+    overflow-y: scroll;
+    padding: 20px 4% 20px;
+  }
+}
+
+
